@@ -12,8 +12,8 @@ end
 host = ENV['MONGODB_PORT_27017_TCP_ADDR']
 port = ENV['MONGODB_PORT_27017_TCP_PORT']
 database = ENV['MONGODB_INSTANCE_NAME']
-username = ENV['MONGODB_PASSWORD']
-password = ENV['MONGODB_USERNAME']
+username = ENV['MONGODB_USERNAME']
+password = ENV['MONGODB_PASSWORD']
 
 hostport=host+':'+port.to_s
 
@@ -26,8 +26,8 @@ $db = Mongo::Client.new([hostport],
 get '/' do
   body "welcome,this is a info about MongoDB:
   host:#{ENV['MONGODB_PORT_27017_TCP_ADDR']}
-  username:#{ENV['MONGODB_PASSWORD']}
-  password:#{ENV['MONGODB_USERNAME']}
+  username:#{ENV['MONGODB_USERNAME']}
+  password:#{ENV['MONGODB_PASSWORD']}
   port:#{ENV['MONGODB_PORT_27017_TCP_PORT']}
   database:#{ENV['MONGODB_INSTANCE_NAME']}"
 
