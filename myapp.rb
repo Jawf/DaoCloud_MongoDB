@@ -29,8 +29,7 @@ get '/' do
   username:#{ENV['MONGODB_PASSWORD']}
   password:#{ENV['MONGODB_USERNAME']}
   port:#{ENV['MONGODB_PORT_27017_TCP_PORT']}
-  database:#{ENV['MONGODB_INSTANCE_NAME']}
-  #{s}"
+  database:#{ENV['MONGODB_INSTANCE_NAME']}"
 
 end
 
