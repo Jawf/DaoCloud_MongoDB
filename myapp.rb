@@ -9,11 +9,11 @@ module Sinatra
   end
 end
 
-host = ENV['MONGODB_PORT_27017_TCP_ADDR']
-port = ENV['MONGODB_PORT_27017_TCP_PORT']
-database = ENV['MONGODB_INSTANCE_NAME']
-username = ENV['MONGODB_USERNAME']
-password = ENV['MONGODB_PASSWORD']
+host = ENV['MONGODB_PORT_27017_TCP_ADDR'] || 'localhost'
+port = ENV['MONGODB_PORT_27017_TCP_PORT'] || 27017
+database = ENV['MONGODB_INSTANCE_NAME'] || 'demo'
+username = ENV['MONGODB_USERNAME'] || 'aong'
+password = ENV['MONGODB_PASSWORD'] || '1234'
 
 hostport=host+':'+port.to_s
 
@@ -44,4 +44,5 @@ get '/get' do
   result.each do |a|
     s.push a['name']
   end
+  body "#{s}"
 end
