@@ -1,4 +1,4 @@
-from ruby
+from daocloud.io/library/ruby
 
 run mkdir /app
 
